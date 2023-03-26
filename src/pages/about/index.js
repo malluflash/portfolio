@@ -9,7 +9,6 @@ import {
   skills,
   services,
 } from "../../content_option";
-import { width } from "@mui/system";
 
 export const About = () => {
   return (
