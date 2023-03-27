@@ -22,7 +22,6 @@ const Headermain = () => {
         <div className="d-flex align-items-center justify-content-between">
           <Link  className="navbar-brand nav_ac" to="/">
             {logotext}  </Link>
-             <Socialicons /> 
          
       
           <div className="d-flex align-items-center">
