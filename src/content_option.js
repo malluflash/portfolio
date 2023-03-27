@@ -141,10 +141,12 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://gitdub.com/malluflash",
+    facebook: "https://www.facebook.com/freakygooogler",
+    linkedin: "https://www.linkedin.com/in/harikrishnankavungal",
+    twitter: "https://twitter.com/freakygo0ogler",
+    instagram: "https://www.instagram.com/freakygooogler",
+
 };
 export {
     meta,
