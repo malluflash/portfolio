@@ -4,7 +4,7 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext } from "../content_option";
 import Themetoggle from "../components/themetoggle";
-import { Socialicons } from "../components/socialicons";
+
 
 
 const Headermain = () => {
