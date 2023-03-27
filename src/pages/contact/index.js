@@ -101,15 +101,15 @@ export const ContactUs = () => {
               </a>
               <br />
               <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
+              {/* {contactConfig.hasOwnProperty("YOUR_FONE") ? (
                 <p>
                   <strong>Phone:</strong> {contactConfig.YOUR_FONE}
                 </p>
               ) : (
                 ""
-              )}
+              )} */}
             </address>
-            <p>{contactConfig.description}</p>
+            <p>If you want to talk to me, please feel free to book me <a href='https://app.simplymeet.me/harikrishnankavungal'>HERE</a></p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">

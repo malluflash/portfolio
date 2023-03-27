@@ -11,7 +11,7 @@ const introdata = {
         second: "But, I love coding!",
         third: "Have a look at my profile.",
     },
-    description: "Hey Guys, My name is Harikrishnan. I'm a logistician by Profession. But I'm very passionate about coding and I      develop dynamic and responsive web apps. Please check out my profile...",
+    description: "Hey Guys, My name is Harikrishnan. I'm a logistician by Profession. But I'm very passionate about coding and I develop dynamic and responsive web apps. Please check out my profile...",
     your_img_url: "https://github.com/malluflash/picsDen/blob/main/portfolio%20bg.jpg?raw=true",
 };
 
@@ -133,10 +133,8 @@ const dataportfolio = [{
 
 const contactConfig = {
     YOUR_EMAIL: "info@harikrishnankavungal.com",
-    
-    description: "If you want to talk to me, please feel free to book me here: https://app.simplymeet.me/harikrishnankavungal",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
+    description: "",
+    // emailjs.com account config
     YOUR_SERVICE_ID: "service_e0thqsn",
     YOUR_TEMPLATE_ID: "template_zo9i4hk",
     YOUR_USER_ID: "-omHGUc2InBigrKti",
