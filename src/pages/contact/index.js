@@ -109,7 +109,7 @@ export const ContactUs = () => {
                 ""
               )} */}
             </address>
-            <p>If you want to talk to me, please feel free to book me <a href='https://app.simplymeet.me/harikrishnankavungal'>HERE</a></p>
+            <p><strong>If you want to talk to me, please feel free to book me <a href='https://app.simplymeet.me/harikrishnankavungal'>HERE</a></strong></p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
