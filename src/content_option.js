@@ -141,7 +141,7 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://gitdub.com/malluflash",
+    github: "https://github.com/malluflash",
     facebook: "https://www.facebook.com/freakygooogler",
     linkedin: "https://www.linkedin.com/in/harikrishnankavungal",
     twitter: "https://twitter.com/freakygo0ogler",
