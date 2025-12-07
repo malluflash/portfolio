@@ -1,77 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@700&family=Marcellus&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-    --bg-color: #0c0c0c;
-    --primary-color: #0d0d0d;
-    --secondary-color: #fff;
-    --text-color: #fff;
-    --text-color-2: #fff;
-    --text-color-3: rgb(204, 0, 0);
-    --overlay-color: rgb(12 12 12 / 63%);
+    --bg-color: #07080f;
+    --primary-color: #e9ff6f;
+    --secondary-color: #7cf7ff;
+    --text-color: #f7f7ff;
+    --text-color-2: #07080f;
+    --text-color-3: #ff5ef6;
+    --overlay-color: rgba(255, 255, 255, 0.12);
+    --card-color: #0e1020;
+    --grid-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="light"] {
-    --bg-color: #ffffff;
-    --primary-color: #ffffff;
-    --secondary-color: #000;
-    --text-color: #000;
-    --text-color-2: #000;
-    --text-color-3: rgb(204, 0, 0);
-    --overlay-color: rgb(255 255 255 / 70%);
-}
+@layer base {
+    html, body {
+        height: 100%;
+    }
 
-html,
-body {
-    height: 100%;
-}
+    body {
+        @apply min-h-screen overflow-x-hidden overflow-y-visible text-text font-body antialiased relative box-border;
+        margin: 0;
+        background: radial-gradient(circle at 20% 20%, rgba(255, 94, 246, 0.08), transparent 25%), radial-gradient(circle at 80% 0%, rgba(124, 247, 255, 0.14), transparent 28%), radial-gradient(circle at 50% 80%, rgba(233, 255, 111, 0.12), transparent 26%), var(--bg-color);
+        padding-top: 60px;
+        letter-spacing: 0.02em;
+    }
 
-body {
-    margin: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Raleway', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px;
-    border-left: 10px solid var(--primary-color);
-    border-right: 10px solid var(--primary-color);
-}
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        border: 12px solid var(--primary-color);
+        pointer-events: none;
+        z-index: 9999;
+        box-sizing: border-box;
+    }
 
-ul {
-    list-style: none;
-}
+    body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.6), transparent 65%);
+        z-index: 0;
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Marcellus;
-}
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display tracking-tight;
+        letter-spacing: -0.01em;
+    }
 
-a,
-a:hover {
-    color: var(--text-color);
-}
+    ul {
+        @apply list-none;
+    }
 
-p {
-    word-break: break-word;
-    hyphens: auto;
+    a {
+        color: var(--text-color);
+    }
+
+    p {
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
 }
 
 .ovhidden {
     overflow: hidden;
-}
-
-.text_2,
-.text_2:hover {
-    color: var(--text-color-2);
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .cursor__dot div {
@@ -87,10 +89,43 @@ code {
     background-color: var(--overlay-color) !important;
 }
 
-.color_pr {
-    color: var(--primary-color) !important;
+/* Page transition classes for react-transition-group */
+.page-enter {
+    transform: translateY(100%);
+}
+.page-enter-active {
+    animation: pageIn 0.4s ease-out forwards;
+}
+.page-exit {
+    transform: translateY(0%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.page-exit-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    animation: pageOut 0.4s ease-out forwards;
 }
 
-.color_sec {
-    color: var(--secondary-color);
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    z-index: 999999999;
+    background: var(--text-color);
+    transform: translateX(100%);
+    animation: loadingBar 1s ease-in-out infinite;
+    animation-delay: .3s;
+}
+
+/* Scroll reveal animations */
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }

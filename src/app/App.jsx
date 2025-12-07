@@ -1,14 +1,9 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  useLocation,
-} from "react-router-dom";
-import withRouter from "../hooks/withRouter";
-import AppRoutes from "./routes";
-import Headermain from "../header";
-import AnimatedCursor  from "../hooks/AnimatedCursor";
-import "./App.css";
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import withRouter from "../hooks/withRouter.jsx";
+import AppRoutes from "./routes.jsx";
+import Headermain from "../header/index.jsx";
+import AnimatedCursor from "../hooks/AnimatedCursor.jsx";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -39,3 +34,4 @@ export default function App() {
     </Router>
   );
 }
+
