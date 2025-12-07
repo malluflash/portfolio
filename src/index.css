@@ -90,6 +90,24 @@
 }
 
 /* Page transition classes for react-transition-group */
+@keyframes pageIn {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-130%);
+    }
+}
+
 .page-enter {
     transform: translateY(100%);
 }
@@ -109,6 +127,21 @@
     right: 0;
     top: 0;
     animation: pageOut 0.4s ease-out forwards;
+}
+
+@keyframes loadingBar {
+    0% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .loading-bar {
