@@ -18,7 +18,7 @@ const introdata = {
   description:
     "Hey Guys, My name is Harikrishnan. I'm a logistician by Profession and a web developer by passion. I develop dynamic and responsive web apps. You can check out my work in the portfolio section.",
   your_img_url:
-    "https://github.com/malluflash/picsDen/blob/main/1733223282388.jpeg?raw=true",
+    "https://github.com/malluflash/picsDen/blob/main/portfolio/dp-portfolio-frontpage.png?raw=true",
 };
 
 const dataabout = {
